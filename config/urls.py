@@ -17,10 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from app.views import UserInfoViewSet
+from app.views import InformationViewSet
 
 defaultRouter = routers.DefaultRouter()
-defaultRouter.register('userInfo', UserInfoViewSet)
+defaultRouter.register('information', InformationViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(defaultRouter.urls))

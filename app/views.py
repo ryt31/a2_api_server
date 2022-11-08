@@ -1,9 +1,9 @@
 from rest_framework import viewsets
-from .models import UserInfo
-from .serializer import UserInfoSerializer
+from .models import Information
+from .serializer import InformationSerializer
 
 
 # Create your views here.
-class UserInfoViewSet(viewsets.ModelViewSet):
-    queryset = UserInfo.objects.all()
-    serializer_class = UserInfoSerializer
+class InformationViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Information.objects.all()
+    serializer_class = InformationSerializer

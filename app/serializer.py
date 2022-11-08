@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import UserInfo
+from .models import Information
 
 
-class UserInfoSerializer(serializers.ModelSerializer):
+class InformationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = UserInfo
-        fields = ('id', 'user_name', 'birth_day', 'age', 'created_at')
+        model = Information
+        fields = ('id', 'date', 'url', 'content', 'created_at')
